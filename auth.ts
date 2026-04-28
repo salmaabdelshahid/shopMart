@@ -34,17 +34,19 @@ export const authOptions : AuthOptions = {
         }
     })
   ],
-  callbacks:{
-    jwt: ({token,user})=>{
-         if(user){
-            token.token = user.token,
-         token.user= user.user
-         }
-         return token
+  callbacks: {
+    jwt: ({ token, user }) => {
+      if (user) {
+        token.token = user.token; // تأكدي إن الاسم هنا 'token'
+        token.user = user.user;
+      }
+      return token;
     },
-    session : ({session, token})=>{
-        session.user= token.user
-        return session
+    session: ({ session, token }) => {
+      // @ts-ignore (لو مغيرتيش الـ types بتاعة next-auth)
+      session.token = token.token; // السطر ده هو اللي هيخلي التوكن يظهر في الموقع
+      session.user = token.user;
+      return session;
     }
   },
   pages : {
