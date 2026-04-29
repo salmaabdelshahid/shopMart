@@ -51,7 +51,8 @@ export default function Cart() {
         <div className="col-span-8 p-2 ml-2">
           <h3 className='text-xl font-semibold'>{item.product.title}</h3>
           <p className='text-gray-500 text-sm'>{item.product.brand.name} · {item.product.category.name}</p>
-          <UpdateItemQuantity countItem={item.count} itemId = {item.product._id}></UpdateItemQuantity>
+          <UpdateItemQuantity countItem={item.count} itemId = {item.product._id} userToken={userToken!}></UpdateItemQuantity>
+          
         </div>
         <div dir="rtl" className="col-span-2 flex flex-col p-3 justify-between items-start">
           <div>

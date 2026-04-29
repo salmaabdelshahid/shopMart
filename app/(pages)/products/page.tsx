@@ -58,7 +58,7 @@ export default async function Products() {
      </Link>
   <CardFooter>
     <AddToCart token={token!} productId={product._id}/>
-    <HeartIcon></HeartIcon>
+    
   </CardFooter>
 </Card>
 )}

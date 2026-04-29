@@ -53,7 +53,7 @@ export default async function ProductDetails({params}:{params: Params}) {
   </CardContent>
   <CardFooter>
     <AddToCart productId={data._id}  token={token!}/>
-    <HeartIcon></HeartIcon>
+    
   </CardFooter>
   </div>
 </Card>

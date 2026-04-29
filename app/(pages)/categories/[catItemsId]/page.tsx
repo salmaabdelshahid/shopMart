@@ -56,7 +56,7 @@ export default async function CatItems({params}:{params:Params}) {
      
   <CardFooter>
     <AddToCart productId={product._id} token={token!}/>
-    <HeartIcon></HeartIcon>
+    
   </CardFooter>
 </Card>
 )}
